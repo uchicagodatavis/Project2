@@ -1,0 +1,150 @@
+<!-- http://chimera.labs.oreilly.com/books/1230000000345/ch06.html#_data_driven_shapes -->
+<!-- python -m SimpleHTTPServer 8887 -->
+<!-- http://localhost:8887/ -->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>D3 Page Template</title>
+        <script type="text/javascript" src="d3/d3.js"></script>
+
+        <style>
+            body {
+                margin-left: 130px;
+                font-family: sans-serif;
+            }
+
+            h1 {
+                font-family: sans-serif;
+                color: black;
+            }
+
+            div.vis {
+                display: block;
+                float:left;
+                position: absolute;
+            }
+            #tooltip {
+                margin-top: 560px;
+                display: block;
+                float: left;
+                position: absolute;
+                width: 1000px;
+                height: auto;
+                padding: 10px;
+                background-color: white;
+                /*-webkit-border-radius: 10px;
+                -moz-border-radius: 10px;
+                border-radius: 10px;
+                -webkit-box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
+                -moz-box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
+                box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);*/
+                pointer-events: none;
+            }
+
+            #tooltip.hidden {
+                display: none;
+            }
+
+            #tooltip p {
+                margin: 0;
+                font-family: sans-serif;
+                font-size: 16px;
+                line-height: 20px;
+            }
+
+            #photo {
+                float: left;
+                margin: 10px;
+                margin-top: 0;
+            }
+
+            #value {
+
+            }
+
+            #name {
+
+            }
+
+            #date {
+
+            }
+
+            #button1 {
+                border-width: 2px;
+                border-color: black;
+                color: white;
+                background-color: #599cd0;
+                padding: 8px;
+                cursor: pointer;
+            }
+
+            #button2 {
+                border-width: 2px;
+                border-color: black;
+                color: white;
+                background-color: #a067a7;
+                padding: 8px;
+                cursor: pointer;
+            }
+
+            #button3 {
+                border-width: 2px;
+                border-color: black;
+                color: white;
+                background-color: #75c374;
+                padding: 8px;
+                cursor: pointer;
+            }
+
+            #button4 {
+                border-width: 2px;
+                border-color: black;
+                color: white;
+                background-color: #f45661;
+                padding: 8px;
+                cursor: pointer;
+            }
+
+        </style>
+
+    </head>
+    <body>
+        
+        <p><h1>Last Words</h1></p>
+        <p id="menu"><a href="index.html">Home</a> | 
+            <a href="#">Race</a> | 
+            <a href="compare.html">Other Writings</a><p>
+ 
+        <!-- onclick="updateData()" -->
+
+        <!-- <div class="buttons">Compare to: 
+            <span id="button1">E.E. Cummings</span>
+            <span id="button2">Sermons</span>
+            <span id="button3">Prayers</span></div> -->
+
+        <div class="buttons">Key: 
+            <span id="button1">Black</span>
+            <span id="button2">White</span>
+            <span id="button3">Hispanic</span>
+            <span id="button4">Other</span>
+            <!-- <span>NOTE: some </span> -->
+        </div>
+
+        <div class="vis"> 
+            <script src="vis2.js"></script>
+        </div>
+
+
+        <div id="tooltip" class="hidden">
+            <p><span><img id="photo" src="nophoto.jpg"></span>
+                <span id="value">statement</span></p>
+            <p>&mdash;<span id="name">name </span>
+                <span id="date">name</span></p>
+        </div>
+
+        
+    </body>
+</html>
