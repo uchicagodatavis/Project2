@@ -60,10 +60,10 @@ function generateVis() {
             var yPosition = parseFloat(d3.select(this).attr("y")) / 2 + h / 2;
 
             if (d.Type != "laststatement") {
-                console.log(d.FirstName);
+                console.log(d.LastS);
                 d3.select("#tooltip")
                     .select("#value")
-                    .text(d.Type);
+                    .text("[" + d.Type + "] " + d.LastS);
                 d3.select("#name")
                     .text("");
                 d3.select("#date")
