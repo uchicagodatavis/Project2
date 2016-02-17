@@ -13,7 +13,6 @@
             body {
                 margin-left: 130px;
                 font-family: sans-serif;
-                margin-right: 130px;
             }
 
             h1 {
@@ -50,7 +49,7 @@
                 display: block;
                 float: left;
                 position: absolute;
-                width: 1000px;
+                width: 1300px;
                 height: auto;
                 padding: 10px;
                 background-color: white;
@@ -70,7 +69,7 @@
             #tooltip p {
                 margin: 0;
                 font-family: sans-serif;
-                font-size: 16px;
+                font-size: 14px;
                 line-height: 20px;
             }
 
@@ -125,20 +124,30 @@
     <body>
         
         <h1>Last Statements</h1>
-        <p id="menu"><a href="#">Home</a> | 
-            <a href="statements.html">Statements</a> | 
+        <p id="menu"><a href="index.html">Home</a> |
+            <a href="#">Statements</a> | 
             <a href="race.html">Race</a> | 
-            <a href="compare.html">Other Writings</a></p>
+            <a href="compare.html">Other Writings</a><p>
+ 
+        <!-- onclick="updateData()" -->
 
-        <br>
+        <!-- <div class="buttons">Compare to: 
+            <span id="button1">E.E. Cummings</span>
+            <span id="button2">Sermons</span>
+            <span id="button3">Prayers</span></div> -->
 
-        <h3>This data set is a collection of the last statements of 533 executed inmates in Texas since 1982. It includes information on their race, age, alleged crime, and photo. There are, however, inconsistencies in the data and incomplete entries. </h3>
+        <div class="vis"> 
+            <script src="vis1.js"></script>
+        </div>
 
-        <h3>Each tab has a slightly different variation of a visualization showing the linguisitic closeness of each statement&mdash;the closer the dots are, the more similar the texts are. The Statements tab is simply the last statements. The Race tab shows the last statements color coded by the race reported in the data set. The Other Writings tab shows the last statements in comparison to other texts, such as poetry, sermons, and apologies. Roll over each dot to read the text.</h3>
 
-        <br>
-        
-        <p>&mdash; Stefano Cagnato, Evan Carter, Julia Oran, and Em K Reishus</p>
+        <div id="tooltip" class="hidden">
+            <p><span><img id="photo" src="nophoto.jpg"></span>
+                <span id="value">statement</span></p>
+            <p>&mdash;<span id="name">name </span>
+                <span id="date">name</span></p>
+        </div>
+
         
     </body>
 </html>
